@@ -1,0 +1,237 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    padding-top: 56px; /* For fixed navbar */
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    height: auto;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #6e8efb;
+    border-color: #6e8efb;
+}
+
+.btn-primary:hover {
+    background-color: #5a7df4;
+    border-color: #5a7df4;
+}
+
+.btn-outline-primary {
+    color: #6e8efb;
+    border-color: #6e8efb;
+}
+
+.btn-outline-primary:hover {
+    background-color: #6e8efb;
+    color: white;
+}
+
+/* Contact Form */
+.contact-method {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 80px 0;
+    }
+    
+    .profile-img {
+        margin-bottom: 30px;
+    }
+    
+    .btn-group {
+        justify-content: center;
+    }
+}
+/* Hobby image container - defines the visible area */
+.hobby-img-container {
+    height: 420px; /* Fixed height */
+    width: 100%;
+    overflow: hidden; /* Clip anything outside container */
+    position: relative;
+  }
+  
+  /* Image styling - will be clipped but not scaled down */
+  .hobby-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container, maintaining aspect ratio */
+    object-position: center; /* Always center the image */
+    transition: transform 0.3s ease; /* For optional hover effect */
+  }
+  
+  /* Optional zoom effect on hover */
+  .card:hover .hobby-img {
+    transform: scale(1.05);
+  }
+
+  .social-btn {
+    background-color: #4a464f;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn i {
+    line-height: 1;
+}
+
+.social-btn:hover {
+    background-color: #ffffff;
+}
+.image-wrapper {
+    background-color: #f0e0ff; /* Light purple background */
+    padding: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(148, 0, 211, 0.3);
+    margin: 20px auto;
+    text-align: center; /* Ensures image centering */
+  }
+  
+  /* Profile Image */
+  .profile-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    border: 3px solid #e8d0ff;
+    box-shadow: 0 0 8px rgba(148, 0, 211, 0.5);
+    margin: 0 auto; /* Centers image within wrapper */
+  }
+
+body.dark-mode {
+    background-color: #392f55;
+    color: #f1f1f1;
+}
+
+
+  /* Dark mode styles for cards and similar boxes */
+body.dark-mode .card {
+    background-color: #1e2a38; /* A dark blue hue */
+    color: #ffffff; /* White text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* If you have any contact-method boxes or similar: */
+body.dark-mode .contact-method {
+    background-color: #1e2a38;
+    color: #ffffff;
+}
+
+body.dark-mode .hero-section {
+    /* Replace with any color or gradient you like */
+    background: linear-gradient(135deg, #3b3b59, #1f1f38);
+    color: #ffffff; /* Ensures text remains legible on dark backgrounds */
+}
+
+/* Additional dark mode adjustments for any white containers */
+body.dark-mode .image-wrapper,
+body.dark-mode .profile-img,
+body.dark-mode .profile-image {
+    background-color: transparent; /* or adjust as needed */
+}
+/* Style for dark mode toggle button (custom class dark-toggle) */
+.dark-toggle {
+    background-color: #6e8efb !important;
+    border-color: #6e8efb !important;
+    color: white !important;
+}
+/* Active or pressed state: a slight scale-down for a tactile effect */
+.dark-toggle:active {
+    transform: scale(0.95);
+}
+
+
+body.dark-mode .dark-toggle {
+    background-color: #5a7df4 !important;
+    border-color: #5a7df4 !important;
+}
