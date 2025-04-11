@@ -1,106 +1,162 @@
 /* General Styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
-    padding-top: 56px; /* For fixed navbar */
-}
+/*This is the default block for the pages*/
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+        padding-top: 56px; /* For fixed navbar */
+    }
+/*This is the Dark-Mode block*/
+    body.dark-mode {
+        background-color: #392f55;
+        color: #f1f1f1;
+    }
 
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
+    /* Dark mode styles for cards and similar boxes */
+    body.dark-mode .card {
+        background-color: #1e2a38; /* A dark blue hue */
+        color: #ffffff; /* White text */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
 
-a {
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+    /* If you have any contact-method boxes or similar: */
+    body.dark-mode .contact-method {
+        background-color: #1e2a38;
+        color: #ffffff;
+    }
 
-/* Navbar */
-.navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    body.dark-mode .hero-section {
+        /* Replace with any color or gradient you like */
+        background: linear-gradient(135deg, #3b3b59, #1f1f38);
+        color: #ffffff; /* Ensures text remains legible on dark backgrounds */
+    }
 
-.navbar-brand {
-    font-weight: 700;
-    font-size: 1.5rem;
-}
+    /* Additional dark mode adjustments for any white containers */
+    body.dark-mode .image-wrapper,
+    body.dark-mode .profile-img,
+    body.dark-mode .profile-image {
+        background-color: transparent; /* or adjust as needed */
+    }
+    /* Style for dark mode toggle button (custom class dark-toggle) */
+    .dark-toggle {
+        background-color: #6e8efb !important;
+        border-color: #6e8efb !important;
+        color: white !important;
+    }
+    /* Active or pressed state: a slight scale-down for a tactile effect */
+    .dark-toggle:active {
+        transform: scale(0.95);
+    }
 
-/* Hero Section */
-.hero-section {
-    padding: 100px 0;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
-    color: white;
-    margin-bottom: 30px;
-}
+    body.dark-mode .dark-toggle {
+        background-color: #5a7df4 !important;
+        border-color: #5a7df4 !important;
+    }
+/*Text block*/
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
 
-.profile-img {
-    border: 5px solid white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    a {
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+/*Navigation bar block*/
+    .navbar {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+/* Hero Section (the one in the home page) */
+    .hero-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: white;
+        margin-bottom: 30px;
+    }
+
+    .profile-img {
+        border: 5px solid white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        height: auto;
+    }
+/* Profile Image */
+  .profile-image {
     max-width: 300px;
+    width: 100%;
     height: auto;
-}
+    border-radius: 50%;
+    display: block;
+    border: 3px solid #e8d0ff;
+    box-shadow: 0 0 8px rgba(148, 0, 211, 0.5);
+    margin: 0 auto; /* Centers image within wrapper */
+  }
 
-/* Cards */
-.card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+/* Cards (boxes)*/
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
 
-/* Buttons */
-.btn {
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
+/* Buttons (to make them more dynamic and modern) */
+    .btn {
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
 
-.btn-primary {
-    background-color: #6e8efb;
-    border-color: #6e8efb;
-}
+    .btn-primary {
+        background-color: #6e8efb;
+        border-color: #6e8efb;
+    }
 
-.btn-primary:hover {
-    background-color: #5a7df4;
-    border-color: #5a7df4;
-}
+    .btn-primary:hover {
+        background-color: #5a7df4;
+        border-color: #5a7df4;
+    }
 
-.btn-outline-primary {
-    color: #6e8efb;
-    border-color: #6e8efb;
-}
+    .btn-outline-primary {
+        color: #6e8efb;
+        border-color: #6e8efb;
+    }
 
-.btn-outline-primary:hover {
-    background-color: #6e8efb;
-    color: white;
-}
+    .btn-outline-primary:hover {
+        background-color: #6e8efb;
+        color: white;
+    }
 
-/* Contact Form */
-.contact-method {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
+/* Contact Form block */
+    .contact-method {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
 
-.contact-method:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+    .contact-method:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
 
-/* Footer */
-footer {
-    margin-top: 50px;
-}
+/* Footer block */
+    footer {
+        margin-top: 50px;
+    }
 
 .social-links a {
     display: inline-block;
@@ -109,20 +165,20 @@ footer {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .hero-section {
-        text-align: center;
-        padding: 80px 0;
+    @media (max-width: 768px) {
+        .hero-section {
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .profile-img {
+            margin-bottom: 30px;
+        }
+        
+        .btn-group {
+            justify-content: center;
+        }
     }
-    
-    .profile-img {
-        margin-bottom: 30px;
-    }
-    
-    .btn-group {
-        justify-content: center;
-    }
-}
 /* Hobby image container - defines the visible area */
 .hobby-img-container {
     height: 420px; /* Fixed height */
@@ -175,63 +231,28 @@ footer {
     margin: 20px auto;
     text-align: center; /* Ensures image centering */
   }
-  
-  /* Profile Image */
-  .profile-image {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    display: block;
-    border: 3px solid #e8d0ff;
-    box-shadow: 0 0 8px rgba(148, 0, 211, 0.5);
-    margin: 0 auto; /* Centers image within wrapper */
-  }
-
-body.dark-mode {
-    background-color: #392f55;
-    color: #f1f1f1;
+/*The learn more button block*/
+  .learn-more-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
 }
 
-
-  /* Dark mode styles for cards and similar boxes */
-body.dark-mode .card {
-    background-color: #1e2a38; /* A dark blue hue */
-    color: #ffffff; /* White text */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+.hobby-img-container:hover .learn-more-btn {
+    opacity: 1;
 }
 
-/* If you have any contact-method boxes or similar: */
-body.dark-mode .contact-method {
-    background-color: #1e2a38;
-    color: #ffffff;
-}
-
-body.dark-mode .hero-section {
-    /* Replace with any color or gradient you like */
-    background: linear-gradient(135deg, #3b3b59, #1f1f38);
-    color: #ffffff; /* Ensures text remains legible on dark backgrounds */
-}
-
-/* Additional dark mode adjustments for any white containers */
-body.dark-mode .image-wrapper,
-body.dark-mode .profile-img,
-body.dark-mode .profile-image {
-    background-color: transparent; /* or adjust as needed */
-}
-/* Style for dark mode toggle button (custom class dark-toggle) */
-.dark-toggle {
-    background-color: #6e8efb !important;
-    border-color: #6e8efb !important;
-    color: white !important;
-}
-/* Active or pressed state: a slight scale-down for a tactile effect */
-.dark-toggle:active {
-    transform: scale(0.95);
-}
-
-
-body.dark-mode .dark-toggle {
-    background-color: #5a7df4 !important;
-    border-color: #5a7df4 !important;
+.learn-more-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
 }

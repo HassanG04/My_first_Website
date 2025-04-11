@@ -1,27 +1,5 @@
-// Wait for the DOM to be fully loaded
+//Creating Dark mode function
 document.addEventListener('DOMContentLoaded', function() {
-    // Interactive button on home page
-    const ctaButton = document.getElementById('ctaButton');
-    if (ctaButton) {
-        ctaButton.addEventListener('click', function() {
-            const responses = [
-                "Fun Fact:I love RTS videogames!",
-                "My linkedin would feel honored to have you!",
-                "Feel free to ask me for anything.",
-                "Check the Hobbies.",
-                "Don't hesitate to contact me."
-            ];
-            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-            document.getElementById('ctaResponse').textContent = randomResponse;
-            
-            // Change button text after first click
-            if (ctaButton.textContent === 'Click Me!') {
-                ctaButton.textContent = 'Click again!';
-            }
-        });
-    }
-    //Creating Dark mode function
-    document.addEventListener('DOMContentLoaded', function() {
         // Dark mode initialization
         function initializeDarkMode() {
             const isDark = localStorage.getItem('dark-mode') === 'enabled';
@@ -46,6 +24,28 @@ document.addEventListener('DOMContentLoaded', function() {
             icon.classList.toggle('fa-moon');
             icon.classList.toggle('fa-sun');
         });
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Interactive button on home page
+    const ctaButton = document.getElementById('ctaButton');
+    if (ctaButton) {
+        ctaButton.addEventListener('click', function() {
+            const responses = [
+                "Fun Fact:I love RTS videogames!",
+                "My linkedin would feel honored to have you!",
+                "Feel free to ask me for anything.",
+                "Check the Hobbies.",
+                "Don't hesitate to contact me."
+            ];
+            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+            document.getElementById('ctaResponse').textContent = randomResponse;
+            
+            // Change button text after first click
+            if (ctaButton.textContent === 'Click Me!') {
+                ctaButton.textContent = 'Click again!';
+            }
+        });
+    }
     // Add active class to current page in navbar
     const currentPage=location.pathname.split('/').pop();
     if(currentPage){
@@ -60,3 +60,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 });
+//if given more time I would have added Arabic translator
